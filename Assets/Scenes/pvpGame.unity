@@ -583,6 +583,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 683414346}
+  - component: {fileID: 683414347}
   m_Layer: 0
   m_Name: Game Controller Script
   m_TagString: Untagged
@@ -605,6 +606,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &683414347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 683414345}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 75e8ba2094e889d4b841a3efeb9117bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerTurn: 0
+  playerTurnCount: 0
+  playerTurnIcons:
+  - {fileID: 0}
+  - {fileID: 0}
+  boardButtons:
+  - {fileID: 1750120318}
+  - {fileID: 2121122914}
+  - {fileID: 254674195}
+  - {fileID: 487046632}
+  - {fileID: 219379480}
+  - {fileID: 1537557224}
+  - {fileID: 2080192729}
+  - {fileID: 1362634655}
+  - {fileID: 1721114316}
 --- !u!1 &877823315
 GameObject:
   m_ObjectHideFlags: 0
