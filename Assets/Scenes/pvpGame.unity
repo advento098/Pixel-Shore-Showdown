@@ -203,7 +203,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 219379481}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 683414347}
+        m_TargetAssemblyTypeName: gameController, Assembly-CSharp
+        m_MethodName: OnClickBoardButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 4
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &219379481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -323,7 +335,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 254674196}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 683414347}
+        m_TargetAssemblyTypeName: gameController, Assembly-CSharp
+        m_MethodName: OnClickBoardButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &254674196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -443,7 +467,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 487046633}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 683414347}
+        m_TargetAssemblyTypeName: gameController, Assembly-CSharp
+        m_MethodName: OnClickBoardButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &487046633
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -621,8 +657,8 @@ MonoBehaviour:
   playerTurn: 0
   playerTurnCount: 0
   playerTurnIcons:
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 8e4e7c2909b050144ad8ecd381083083, type: 3}
+  - {fileID: 21300000, guid: 5791903710a6b6e408a2475d657c0710, type: 3}
   boardButtons:
   - {fileID: 1750120318}
   - {fileID: 2121122914}
@@ -633,6 +669,7 @@ MonoBehaviour:
   - {fileID: 2080192729}
   - {fileID: 1362634655}
   - {fileID: 1721114316}
+  markedSpaces: 000000000000000000000000000000000000000000000000000000000000000000000000
 --- !u!1 &877823315
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,7 +962,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1362634656}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 683414347}
+        m_TargetAssemblyTypeName: gameController, Assembly-CSharp
+        m_MethodName: OnClickBoardButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 7
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1362634656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1045,7 +1094,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1537557225}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 683414347}
+        m_TargetAssemblyTypeName: gameController, Assembly-CSharp
+        m_MethodName: OnClickBoardButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 5
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1537557225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1165,7 +1226,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1721114317}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 683414347}
+        m_TargetAssemblyTypeName: gameController, Assembly-CSharp
+        m_MethodName: OnClickBoardButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 8
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1721114317
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1285,7 +1358,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1750120319}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 683414347}
+        m_TargetAssemblyTypeName: gameController, Assembly-CSharp
+        m_MethodName: OnClickBoardButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1750120319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1473,7 +1558,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2080192730}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 683414347}
+        m_TargetAssemblyTypeName: gameController, Assembly-CSharp
+        m_MethodName: OnClickBoardButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 6
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2080192730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1593,7 +1690,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2121122915}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 683414347}
+        m_TargetAssemblyTypeName: gameController, Assembly-CSharp
+        m_MethodName: OnClickBoardButton
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2121122915
 MonoBehaviour:
   m_ObjectHideFlags: 0
