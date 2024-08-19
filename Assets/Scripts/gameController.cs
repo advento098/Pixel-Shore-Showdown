@@ -11,6 +11,7 @@ public class gameController : MonoBehaviour
     // public GameObject[] playerTurnIcons;
     public Sprite[] playerTurnIcons;
     public Button[] boardButtons;
+    public Button[] buttonImages;
     public int[] markedSpaces;
     void Start()
     {
@@ -20,6 +21,7 @@ public class gameController : MonoBehaviour
         {
             boardButtons[i].interactable = true;
             boardButtons[i].GetComponent<Image>().sprite = null;
+            buttonImages[i].GetComponent<Image>().sprite = null;
         }
 
         for (int i = 0; i < markedSpaces.Length; i++)
@@ -37,7 +39,7 @@ public class gameController : MonoBehaviour
 
     public void OnClickBoardButton(int buttonIndex)
     {
-        boardButtons[buttonIndex].image.sprite = playerTurnIcons[playerTurn];
+        buttonImages[buttonIndex].image.sprite = playerTurnIcons[playerTurn];
         boardButtons[buttonIndex].interactable = false;
         playerTurnCount++;
 
