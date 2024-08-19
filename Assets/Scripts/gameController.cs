@@ -6,12 +6,14 @@ using UnityEngine.UI;
 public class gameController : MonoBehaviour
 {
     // Start is called before the first frame update
+    public GameObject winningLineParent;
+    public GameObject winningLine;
     public int playerTurn;
     public int playerTurnCount;
     // public GameObject[] playerTurnIcons;
     public Sprite[] playerTurnIcons;
     public Button[] boardButtons;
-    public Button[] buttonImages;
+    //public Button[] buttonImages;
     public int[] markedSpaces;
     void Start()
     {
@@ -21,7 +23,7 @@ public class gameController : MonoBehaviour
         {
             boardButtons[i].interactable = true;
             boardButtons[i].GetComponent<Image>().sprite = null;
-            buttonImages[i].GetComponent<Image>().sprite = null;
+            //buttonImages[i].GetComponent<Image>().sprite = null;
         }
 
         for (int i = 0; i < markedSpaces.Length; i++)
@@ -39,7 +41,7 @@ public class gameController : MonoBehaviour
 
     public void OnClickBoardButton(int buttonIndex)
     {
-        buttonImages[buttonIndex].image.sprite = playerTurnIcons[playerTurn];
+        boardButtons[buttonIndex].image.sprite = playerTurnIcons[playerTurn];
         boardButtons[buttonIndex].interactable = false;
         playerTurnCount++;
 
@@ -48,8 +50,12 @@ public class gameController : MonoBehaviour
         if (playerTurnCount >= 4 && playerTurnCount <= 9)
         {
             WinnerChecker();
+            if (playerTurnCount == 9)
+            {
+                playerTurnCount++;
+            }
         }
-        else if (playerTurnCount == 9)
+        else if (playerTurnCount > 9)
         {
             Debug.Log("Game Over");
         }
@@ -82,6 +88,24 @@ public class gameController : MonoBehaviour
             if (solutions[i] == 3 * (playerTurn + 1))
             {
                 Debug.Log("Player " + (playerTurn + 1) + " wins");
+                switch (i)
+                {
+
+                    // Horizontal Winnings
+                    case 0:
+                        GameObject winningLinePos = Instantiate(winningLine, new Vector3(0, 2.8f, 0), Quaternion.identity) as GameObject;
+                        winningLinePos.transform.SetParent(winningLineParent.transform, false);
+                        break;
+                    case 1:
+                       
+                        break;
+                    case 2:
+                        
+                        break;
+
+                    default:
+                        break;
+                }
             }
         }
     }
