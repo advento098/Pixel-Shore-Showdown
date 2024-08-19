@@ -90,19 +90,36 @@ public class gameController : MonoBehaviour
                 Debug.Log("Player " + (playerTurn + 1) + " wins");
                 switch (i)
                 {
-
                     // Horizontal Winnings
                     case 0:
-                        GameObject winningLinePos = Instantiate(winningLine, new Vector3(0, 2.8f, 0), Quaternion.identity) as GameObject;
-                        winningLinePos.transform.SetParent(winningLineParent.transform, false);
+                        GameObject winningLinePos = Instantiate(winningLine, new Vector3(0, 2.8f, 0), Quaternion.identity, winningLineParent.transform);
                         break;
                     case 1:
-                       
+                        GameObject winningLinePos1 = Instantiate(winningLine, new Vector3(0, 0, 0), Quaternion.identity, winningLineParent.transform);
                         break;
                     case 2:
-                        
+                        GameObject winningLinePos2 = Instantiate(winningLine, new Vector3(0, -2.8f, 0), Quaternion.identity, winningLineParent.transform);
                         break;
 
+
+                    // Vertical Winnings
+                    case 3:
+                        GameObject winningLinePos3 = Instantiate(winningLine, new Vector3(-2.8f, 0, 0), Quaternion.Euler(0, 0, 90), winningLineParent.transform);
+                        break;
+                    case 4:
+                        GameObject winningLinePos4 = Instantiate(winningLine, new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 90), winningLineParent.transform);
+                        break;
+                    case 5:
+                        GameObject winningLinePos5 = Instantiate(winningLine, new Vector3(2.8f, 0, 0), Quaternion.Euler(0, 0, 90), winningLineParent.transform);
+                        break;
+
+                    // Diagonal Winnings
+                    case 6:
+                        GameObject winningLinePos6 = Instantiate(winningLine, new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 135), winningLineParent.transform);
+                        break;
+                    case 7:
+                        GameObject winningLinePos7 = Instantiate(winningLine, new Vector3(0, 0, 0), Quaternion.Euler(0, 0, 45), winningLineParent.transform);
+                        break;
                     default:
                         break;
                 }
