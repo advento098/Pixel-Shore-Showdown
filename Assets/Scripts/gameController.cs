@@ -13,21 +13,19 @@ public class gameController : MonoBehaviour
     public Text playerTurnIndicator;
     public Text[] playerTextScores;
     public int[] playerScores;
-    // public GameObject[] playerTurnIcons;
     public Sprite[] playerTurnIcons;
     public Button[] boardButtons;
-    //public Button[] buttonImages;
+    public Color[] colors;
     public int[] markedSpaces;
     void Start()
     {
-        playerScores = new int[2];
+        playerScores = new int[] { int.Parse(playerTextScores[0].text), int.Parse(playerTextScores[1].text) };
         playerTurn = 0;
         playerTurnCount = 0;
         for (int i = 0; i < boardButtons.Length; i++)
         {
             boardButtons[i].interactable = true;
             boardButtons[i].GetComponent<Image>().sprite = null;
-            //buttonImages[i].GetComponent<Image>().sprite = null;
         }
 
         for (int i = 0; i < markedSpaces.Length; i++)
@@ -54,14 +52,11 @@ public class gameController : MonoBehaviour
         if (playerTurnCount >= 4 && playerTurnCount <= 9)
         {
             WinnerChecker();
-            if (playerTurnCount == 9)
+            if (playerTurnCount == 9 && GameObject.FindGameObjectWithTag("Winner Line") == null)
             {
-                playerTurnCount++;
+                RestartButton();
+                Debug.Log("Game Over");
             }
-        }
-        else if (playerTurnCount > 9)
-        {
-            Debug.Log("Game Over");
         }
 
         if (playerTurn == 0)
@@ -145,5 +140,25 @@ public class gameController : MonoBehaviour
             }
         }
 
+    }
+
+    public void RestartButton()
+    {
+        for (int i = 0; i < boardButtons.Length; i++)
+        {
+            boardButtons[i].interactable = true;
+            boardButtons[i].GetComponent<Image>().sprite = null;
+            boardButtons[i].GetComponent<Image>().color = new Color(0, 0, 0, 1);
+        }
+
+        for (int i = 0; i < markedSpaces.Length; i++)
+        {
+            markedSpaces[i] = -100;
+        }
+        Destroy(GameObject.FindGameObjectWithTag("Winner Line"));
+        playerScores = new int[] { int.Parse(playerTextScores[0].text), int.Parse(playerTextScores[1].text) };
+        playerTurn = 0;
+        playerTurnCount = 0;
+        playerTurnIndicator.text = "X";
     }
 }
