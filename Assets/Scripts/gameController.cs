@@ -10,6 +10,9 @@ public class gameController : MonoBehaviour
     public GameObject winningLine;
     public int playerTurn;
     public int playerTurnCount;
+    public Text playerTurnIndicator;
+    public Text[] playerTextScores;
+    public int[] playerScores;
     // public GameObject[] playerTurnIcons;
     public Sprite[] playerTurnIcons;
     public Button[] boardButtons;
@@ -17,6 +20,7 @@ public class gameController : MonoBehaviour
     public int[] markedSpaces;
     void Start()
     {
+        playerScores = new int[2];
         playerTurn = 0;
         playerTurnCount = 0;
         for (int i = 0; i < boardButtons.Length; i++)
@@ -62,10 +66,12 @@ public class gameController : MonoBehaviour
 
         if (playerTurn == 0)
         {
+            playerTurnIndicator.text = "O";
             playerTurn = 1;
         }
         else
         {
+            playerTurnIndicator.text = "X";
             playerTurn = 0;
         }
     }
@@ -88,6 +94,7 @@ public class gameController : MonoBehaviour
             if (solutions[i] == 3 * (playerTurn + 1))
             {
                 Debug.Log("Player " + (playerTurn + 1) + " wins");
+                playerTextScores[playerTurn].text = (playerScores[playerTurn] + 1).ToString();
                 switch (i)
                 {
                     // Horizontal Winnings
@@ -123,7 +130,20 @@ public class gameController : MonoBehaviour
                     default:
                         break;
                 }
+
+                for (int j = 0; j < boardButtons.Length; j++)
+                {
+                    if (markedSpaces[j] == -100)
+                    {
+                        boardButtons[j].interactable = false;
+                        boardButtons[j].GetComponent<Image>().color = new Color(0, 0, 0, 0);
+                    }
+                }
+                // Debug.Log(playerScores[playerTurn]);
+                // playerScores[playerTurn]++;
+                // playerTextScores[playerTurn].text = playerScores[playerTurn].ToString();
             }
         }
+
     }
 }
