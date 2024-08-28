@@ -1,7 +1,6 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class gameController : MonoBehaviour
 {
@@ -10,8 +9,10 @@ public class gameController : MonoBehaviour
     public GameObject winningLine;
     public int playerTurn;
     public int playerTurnCount;
-    public Text playerTurnIndicator;
-    public Text[] playerTextScores;
+    // public Text playerTurnIndicator;
+    public TextMeshProUGUI playerTurnIndicator;
+    // public Text[] playerTextScores;
+    public TextMeshProUGUI[] playerTextScores;
     public int[] playerScores;
     public Sprite[] playerTurnIcons;
     public Button[] boardButtons;
@@ -43,6 +44,7 @@ public class gameController : MonoBehaviour
 
     public void OnClickBoardButton(int buttonIndex)
     {
+        FindObjectOfType<AudioManager>().Play("Player Move");
         boardButtons[buttonIndex].image.sprite = playerTurnIcons[playerTurn];
         boardButtons[buttonIndex].interactable = false;
         playerTurnCount++;
