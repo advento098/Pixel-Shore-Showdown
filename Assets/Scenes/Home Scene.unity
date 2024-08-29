@@ -2125,7 +2125,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8011611843085215985, guid: 5ab8f63b2b8b4b04e89caa81bf97f4a8, type: 3}
       propertyPath: sounds.Array.size
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8011611843085215985, guid: 5ab8f63b2b8b4b04e89caa81bf97f4a8, type: 3}
       propertyPath: sounds.Array.data[0].clip
@@ -2168,6 +2168,14 @@ PrefabInstance:
       value: Player Move
       objectReference: {fileID: 0}
     - target: {fileID: 8011611843085215985, guid: 5ab8f63b2b8b4b04e89caa81bf97f4a8, type: 3}
+      propertyPath: sounds.Array.data[4].clip
+      value: 
+      objectReference: {fileID: 8300000, guid: fd03b59d208056f4082d942a237098bf, type: 3}
+    - target: {fileID: 8011611843085215985, guid: 5ab8f63b2b8b4b04e89caa81bf97f4a8, type: 3}
+      propertyPath: sounds.Array.data[4].name
+      value: Winning Sound
+      objectReference: {fileID: 0}
+    - target: {fileID: 8011611843085215985, guid: 5ab8f63b2b8b4b04e89caa81bf97f4a8, type: 3}
       propertyPath: sounds.Array.data[0].pitch
       value: 1
       objectReference: {fileID: 0}
@@ -2184,6 +2192,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8011611843085215985, guid: 5ab8f63b2b8b4b04e89caa81bf97f4a8, type: 3}
+      propertyPath: sounds.Array.data[4].pitch
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8011611843085215985, guid: 5ab8f63b2b8b4b04e89caa81bf97f4a8, type: 3}
       propertyPath: sounds.Array.data[1].volume
       value: 1
       objectReference: {fileID: 0}
@@ -2193,6 +2205,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8011611843085215985, guid: 5ab8f63b2b8b4b04e89caa81bf97f4a8, type: 3}
       propertyPath: sounds.Array.data[3].volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8011611843085215985, guid: 5ab8f63b2b8b4b04e89caa81bf97f4a8, type: 3}
+      propertyPath: sounds.Array.data[4].volume
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
