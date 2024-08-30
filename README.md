@@ -8,7 +8,7 @@ Welcome to the Tic-Tac-Toe Game repository! This project contains a fully functi
 
 _**Running the Built Game**_
 
-If you want to play the game without making any changes, simply download the repository and navigate to the Assets/Build folder. Open the executable file to start the game. No installation is required—just download and play!
+If you want to play the game without making any changes, build it using the unity game engine after the cloning process.
 
 _**Cloning the Repository for Development**_
 
